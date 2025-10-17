@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 20%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #fff, #ccc, #fff, #ccc);
+    border-radius: 17px;
+    z-index: -1;
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    animation: textPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes textPulse {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; }
+    to { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff; }
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px #fff;
+    background: url('https://i.ibb.co/S4MYX4hH/photo-2025-07-27-08-50-20.jpg') center/cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.avatar:hover {
+    box-shadow: 0 0 30px #fff, 0 0 40px #fff;
+    transform: scale(1.05);
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #cccccc;
+    text-shadow: 0 0 5px #fff;
+}
+
+.facts {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.facts h2 {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    margin-bottom: 15px;
+}
+
+.facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.facts li {
+    margin: 15px 0;
+    font-size: 1.1em;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.facts li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.5em;
+    margin: 30px 0;
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.buttons {
+    margin: 30px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff;
+    transform: scale(1.05);
+}
+
+.secret {
+    opacity: 0.3;
+    font-size: 0.8em;
+    margin-top: 50px;
+    transition: 0.5s;
+    cursor: default;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+
+.secret:hover {
+    opacity: 1;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}

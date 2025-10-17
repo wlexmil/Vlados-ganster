@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>владганстер</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>kousetsuuu</h1>
+        <div class="avatar"></div>
+        <p class="subtitle">кароче я легенда кс и клэш рояля</p>
+
+        <div class="facts">
+            <h2>в чём я жоска крут:</h2>
+            <ul>
+                <li>хаваю 50 пельменей за раз</li>
+                <li>люблю сашу если чо ребятки</li>
+                <li>я люблю ещо кароче ганста музяку</li>
+                <li>люблю сидр, ну пизда обожаю ребятки</li>
+                <li>депаю в казик и депнул свою сашу в казик</li>
+            </ul>
+        </div>
+
+        <div class="quote">а вот мая любимая сашка</div>
+
+        <div class="gallery">
+            <img src="https://thumbs4.imagebam.com/56/e1/de/ME16Y7EU_t.jpg" alt="photo_2025-10-17_19-16-46.jpg">
+            <img src="https://thumbs4.imagebam.com/7a/ba/a5/ME16Y7H9_t.jpg" alt="photo_2025-10-17_19-16-47.jpg">
+        </div>
+
+        <div class="secret">создала я сашка-какашка с любовью арешке бигбоб</div>
+    </div>
+
+    <script>
+        function showSecret() {
+            alert('какашке');
+        }
+        document.querySelector('.avatar').addEventListener('click', function() {
+            this.style.boxShadow = '0 0 30px white';
+            setTimeout(() => this.style.boxShadow = '0 0 20px white', 300);
+        });
+        setInterval(() => {
+            const elements = document.querySelectorAll('h1, .button, .facts li');
+            elements.forEach(el => {
+                if (Math.random() > 0.8) {
+                    el.style.textShadow = '0 0 10px white';
+                    setTimeout(() => el.style.textShadow = '0 0 5px white', 200);
+                }
+            });
+        }, 1000);
+    </script>
